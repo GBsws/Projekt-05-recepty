@@ -1,0 +1,158 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+.seznam{
+  
+}
+.recepty{
+    min-height:90px;
+}
+
+h2{
+    font-family: 'Raleway';
+    font-weight: 800;
+    color:white;
+    text-align:left;
+    padding-left:10px;
+    padding-top:80px;
+}
+.hlavni{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)), url("images/salat.jpg");
+    background-position:center;
+    background-size:cover;
+    min-height:200px;
+}
+.recept-nahore{
+    display:flex;
+    padding:10px;
+    
+}
+.recept-kategorie,
+.recept-komentare{
+    font-style:'Source Sans Pro';
+    font-size:14px;
+    font-weight:400;
+    color:white;
+    
+}
+.recept-kategorie{
+    flex-grow:1;
+}
+.dva{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)), url('images/chlebicek.jpg');
+    background-position:center;
+    background-size:cover;
+}
+.tri{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)), url('images/tacos.jpg');
+    background-position:center;  
+    background-size:cover;
+}
+.ctyri{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)), url('images/cizrna.jpg');
+    background-position:center; 
+    background-size:cover;
+}
+.pet{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3)),url('images/salat.jpg');
+    background-position:center; 
+    background-size:cover;
+}
+
+@media (max-width:479px) {
+    .dva,
+    .tri,
+    .ctyri,
+    .pet{
+        margin-bottom:-19px;
+    }
+    .hlavni{
+        margin-bottom:1px;
+    }
+}
+@media (min-width: 480px) {
+    .hlavni h2{
+        font-size:36px;
+    }
+    .recepty h2{
+        font-size:22px;
+    }
+    .hlavni{
+        width:100vw;
+    }
+    .recepty{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .dva,
+    .tri,
+    .ctyri,
+    .pet{
+        flex:1 1 calc((100% / 2) - 1%);
+    } 
+    .dva,
+    .tri{
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .dva,
+    .ctyri{
+        margin-right:1px;
+        }
+    }
+
+@media (min-width:860px)  {
+    .seznam{
+        display:flex;
+    }
+    .hlavni{
+        height:100wh;
+        order:0;
+        margin-right:1px;
+    }
+}
+.paticka{
+    visibility:hidden;
+}
